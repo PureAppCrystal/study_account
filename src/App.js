@@ -38,7 +38,9 @@ class App extends Component {
     const loginId = id;
     const password = pw;
     console.log("id : ", id ,", pw : ", pw)
-    axios.post('http://localhost:4000/api/account/login', {loginId, password} )
+    //http://101.101.166.29:4000/api/test
+    //axios.post('http://101.101.166.29:4000/api/account/login', {loginId, password, 
+    axios.post('/api/account/login', {loginId, password } )
       .then( response => {
         console.log("response : ", response)
         if (response.data.resultCode === "0000") {
